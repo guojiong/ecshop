@@ -1,3 +1,6 @@
-<script language="javascript" type="text/javascript">
+<!-- <script language="javascript" type="text/javascript">
     window.location.href="login.page";
-</script>
+</script> -->
+
+<a href="login.page">test</a>
+<a href="erp">erp</a>

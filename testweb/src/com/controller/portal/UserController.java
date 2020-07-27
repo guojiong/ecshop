@@ -43,12 +43,18 @@ public class UserController {
     @RequestMapping(value = "/register.do")
     public ModelAndView register(User user){
         ModelAndView mav = new ModelAndView();
-        if (user.getId()==null && user.getUsername()==null){
+        if (user.getUsername()==null){
             mav.setViewName("reg");
+        }else {
+        	iUserService.register(user);
+        	mav.setViewName("success");
+        	mav.addObject("result","register success!!");
         }
-        iUserService.register(user);
-        mav.setViewName("success");
-        mav.addObject("result","register success!!");
+        return mav;
+    }
+    @RequestMapping(value = "/erp")
+    public ModelAndView erp(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
+        ModelAndView mav = new ModelAndView("storage");
         return mav;
     }
 }

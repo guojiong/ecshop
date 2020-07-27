@@ -74,7 +74,7 @@ filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Colo
 
 /*reg*/
 .loginBuy{border:#CCC 5px solid; border-radius:5px;}
-.loginBuyLeft{width:655px;float:left;border-right:1px solid #CCC;}
+.loginBuyLeft{width:755px;float:center;border-right:1px solid #CCC;}
 .loginBuyList{width:308px;height:48px;border:#DEDEDE 1px solid;border-bottom:0; position:relative;}
 .regForm{padding:10px 0 15px 170px; display:none;}
 .loginBuyList label{ display:block;width:75px;padding-left:15px;height:48px; position:absolute;left:1px;top:1px;line-height:48px;font-size:14px;color:#666;}
@@ -87,7 +87,7 @@ filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Colo
 .falv{height:35px;line-height:35px;font-size:14px;padding:5px 0;}
 .falv span{ position:relative;bottom:2px; font-family:"微软雅黑"}
 .falv a{color:#06F;}
-.regSubs{padding:10px 0;}
+.regSubs{padding:8px 0;}
 .regSubs input{border:0;background:#95d838;color:#fff;width:352px;height:41px;font-size:14px; cursor:pointer;}
 .regEq{}
 .regEq li,.regEq2 li{width:327px;float:left;height:55px;line-height:55px; text-align:center;font-size:14px; font-weight:bold;border-bottom:#CCC 1px solid; cursor:pointer;}
