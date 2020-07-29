@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.GoodsMapper" >
+  <resultMap id="BaseResultMap" type="com.pojo.Goods" >
+    <constructor >
+      <idArg column="id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="storage_time" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="code" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="material_classes" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="small_class_material" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="material_name" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="brand_specification_model" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="manufacturer_name" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="chengs" jdbcType="TIMESTAMP" javaType="java.lang.String" />
+      <arg column="unit" jdbcType="TIMESTAMP" javaType="java.lang.String" />
+      <arg column="rate" jdbcType="VARCHAR" javaType="java.lang.Float" />
+      <arg column="number" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      
+      <arg column="no_tax_price" jdbcType="VARCHAR" javaType="java.lang.Float" />
+      <arg column="deduction_tax_fee" jdbcType="VARCHAR" javaType="java.lang.Float" />
+      <arg column="no_tax_total_fee" jdbcType="VARCHAR" javaType="java.lang.Float" />
+      <arg column="contain_tax_total_fee" jdbcType="VARCHAR" javaType="java.lang.Float" />
+      
+      <arg column="transport_fee_price" jdbcType="VARCHAR" javaType="java.lang.Float" />
+      <arg column="transport_fee_item" jdbcType="VARCHAR" javaType="java.lang.Float" />
+      <arg column="transport_fee_etc" jdbcType="VARCHAR" javaType="java.lang.Float" />
+      
+      <arg column="etc_fee" jdbcType="VARCHAR" javaType="java.lang.Float" />
+      <arg column="total_fee" jdbcType="VARCHAR" javaType="java.lang.Float" />
+      
+      <arg column="attachment" jdbcType="VARCHAR" javaType="java.lang.Integer" />
+      <arg column="procurement" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="inspector" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="supply_unit" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="belongs_project" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="remark" jdbcType="VARCHAR" javaType="java.lang.String" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, storage_time, code, material_classes, small_class_material, material_name, brand_specification_model, manufacturer_name, chengs, unit, rate, number, no_tax_price, deduction_tax_fee, no_tax_total_fee, contain_tax_total_fee, transport_fee_price, transport_fee_item, transport_fee_etc, etc_fee, total_fee, attachment, procurement, inspector, supply_unit, belongs_project, remark
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from erp_goods
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from erp_goods
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.pojo.Goods" >
+    insert into erp_goods (<include refid="Base_Column_List" />)
+    values (#{id,jdbcType=INTEGER}, #{storageTime,jdbcType=DATE}, #{code,jdbcType=VARCHAR}, 
+      #{material_classes,jdbcType=VARCHAR}, #{small_class_material,jdbcType=VARCHAR}, #{materialName,jdbcType=VARCHAR}, 
+      #{brand_specification_model,jdbcType=VARCHAR}, #{manufacturer_name,jdbcType=VARCHAR}, 
+	  #{chengs,jdbcType=VARCHAR}, #{unit,jdbcType=VARCHAR}, #{rate,jdbcType=FLOAT}, 
+      #{number,jdbcType=FLOAT}, #{no_tax_price,jdbcType=FLOAT}, #{deduction_tax_fee,jdbcType=FLOAT}, 
+      #{no_tax_total_fee,jdbcType=FLOAT}, #{contain_tax_total_fee,jdbcType=FLOAT}, 
+      #{transport_fee_price,jdbcType=FLOAT}, #{transport_fee_item,jdbcType=FLOAT}, 
+      #{transport_fee_etc,jdbcType=FLOAT}, #{etc_fee,jdbcType=FLOAT}, #{total_fee,jdbcType=FLOAT}, 
+      #{attachment,jdbcType=INTEGER}, #{procurement,jdbcType=VARCHAR}, #{inspector,jdbcType=VARCHAR}, 
+      #{supply_unit,jdbcType=VARCHAR}, #{belongs_project,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.pojo.Goods" >
+    insert into erp_goods
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="username != null" >
+        username,
+      </if>
+      <if test="password != null" >
+        password,
+      </if>
+      <if test="email != null" >
+        email,
+      </if>
+      <if test="phone != null" >
+        phone,
+      </if>
+      <if test="question != null" >
+        question,
+      </if>
+      <if test="answer != null" >
+        answer,
+      </if>
+      <if test="role != null" >
+        role,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="username != null" >
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="question != null" >
+        #{question,jdbcType=VARCHAR},
+      </if>
+      <if test="answer != null" >
+        #{answer,jdbcType=VARCHAR},
+      </if>
+      <if test="role != null" >
+        #{role,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        now(),
+      </if>
+      <if test="updateTime != null" >
+        now(),
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.pojo.Goods" >
+    update erp_goods
+    <set >
+      <if test="username != null" >
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="question != null" >
+        question = #{question,jdbcType=VARCHAR},
+      </if>
+      <if test="answer != null" >
+        answer = #{answer,jdbcType=VARCHAR},
+      </if>
+      <if test="role != null" >
+        role = #{role,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = now(),
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.pojo.Goods" >
+    update erp_goods
+    set username = #{username,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      question = #{question,jdbcType=VARCHAR},
+      answer = #{answer,jdbcType=VARCHAR},
+      role = #{role,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = now()
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  <select id="selectLogin" resultMap="BaseResultMap" parameterType="map">
+    SELECT
+--     //这样真的好么?答案就是,这样不好.
+    <include refid="Base_Column_List" />
+    from ops_user
+    where username = #{username}
+    and password = #{password}
+  </select>
+
+</mapper>

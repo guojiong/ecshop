@@ -36,7 +36,7 @@ a:hover{color:#F00;}
 #header{height:35px;line-height:35px;border-bottom:1px solid #EEE; background:#F5F5F5;}
 
 /*mainCont*/
-.mainCont{width:980px;margin:10px auto;}
+.mainCont{width:80%;margin:10px auto;}
 .loginBox{-moz-box-shadow: 1px 3px 14px #858585;
 -webkit-box-shadow: 1px 3px 14px #858585;
 box-shadow: 1px 3px 14px #858585;

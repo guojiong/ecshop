@@ -52,9 +52,4 @@ public class UserController {
         }
         return mav;
     }
-    @RequestMapping(value = "/erp")
-    public ModelAndView erp(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
-        ModelAndView mav = new ModelAndView("storage");
-        return mav;
-    }
 }
