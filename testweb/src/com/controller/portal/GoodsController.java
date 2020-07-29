@@ -38,4 +38,10 @@ public class GoodsController {
         return mav;
     }
     
+    @RequestMapping(value = "/demo")
+    public ModelAndView demo() {
+    	ModelAndView mav = new ModelAndView();
+		mav.setViewName("demo");
+        return mav;
+    }
 }

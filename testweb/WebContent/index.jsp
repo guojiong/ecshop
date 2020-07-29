@@ -4,3 +4,4 @@
 
 <a href="login.page">test</a>
 <a href="storage.list">erp</a>
+<a href="demo">demo</a>
