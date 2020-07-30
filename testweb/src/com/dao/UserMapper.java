@@ -1,6 +1,9 @@
 package com.dao;
 
 import com.pojo.User;
+
+import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface UserMapper {
@@ -9,6 +12,8 @@ public interface UserMapper {
     int insert(User record);
 
     int insertSelective(User record);
+    
+    List<User> Query();
 
     User selectByPrimaryKey(Integer id);
 

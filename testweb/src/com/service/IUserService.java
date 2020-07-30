@@ -1,5 +1,7 @@
 package com.service;
 
+import java.util.List;
+
 import com.common.ServerResponse;
 import com.pojo.User;
 
@@ -9,7 +11,7 @@ import com.pojo.User;
 public interface IUserService {
 
     ServerResponse<User> login(String username, String password);
-
+    
     ServerResponse<String> register(User user);
 
     ServerResponse<String> checkValid(String str,String type);
@@ -25,6 +27,8 @@ public interface IUserService {
     ServerResponse<User> updateInformation(User user);
 
     ServerResponse<User> getInformation(Integer userId);
+    
+    ServerResponse<List<User>> Query();
 
     ServerResponse checkAdminRole(User user);
 }

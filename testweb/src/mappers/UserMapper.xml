@@ -24,6 +24,12 @@
     from ops_user
     where id = #{id,jdbcType=INTEGER}
   </select>
+  <select id="Query" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from ops_user
+    where 1=1
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from ops_user
     where id = #{id,jdbcType=INTEGER}
@@ -210,9 +216,5 @@
     where email = #{email}
     and id != #{userId}
   </select>
-
-
-
-
 
 </mapper>

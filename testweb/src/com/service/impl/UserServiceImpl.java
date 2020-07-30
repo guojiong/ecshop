@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -242,6 +243,10 @@ public class UserServiceImpl implements IUserService {
         return ServerResponse.createByError();
     }
 
-
+	@Override
+	public ServerResponse<List<User>> Query() {
+		List<User> list =  userMapper.Query();
+		return ServerResponse.createBySuccess("登录成功",list);
+	}
 
 }
