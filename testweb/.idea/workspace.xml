@@ -204,6 +204,7 @@
       <option name="presentableId" value="Default" />
       <updated>1596091877310</updated>
       <workItem from="1596091881332" duration="1128000" />
+      <workItem from="1596185538917" duration="152000" />
     </task>
     <servers />
   </component>
@@ -220,6 +221,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="175" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596092145364">
@@ -234,10 +236,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="118" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1366.728/1366.-305.1920.1040@0.0.1366.728" timestamp="1596092328564" />
-    <state x="625" y="118" key="FileChooserDialogImpl" timestamp="1596092423350">
+    <state x="625" y="118" key="FileChooserDialogImpl" timestamp="1596185688245">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="625" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.-305.1920.1040@0.0.1366.728" timestamp="1596092423350" />
+    <state x="625" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.-305.1920.1040@0.0.1366.728" timestamp="1596185688245" />
     <state width="1145" height="273" key="GridCell.Tab.0.bottom" timestamp="1596093013213">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -290,5 +292,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="163" y="0" key="SettingsEditor/0.0.1366.728/1366.-305.1920.1040@0.0.1366.728" timestamp="1596092424946" />
+    <state x="57" y="0" key="new project wizard" timestamp="1596185694047">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="57" y="0" key="new project wizard/0.0.1366.728/1366.-305.1920.1040@0.0.1366.728" timestamp="1596185694047" />
   </component>
 </project>
