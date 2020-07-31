@@ -4,6 +4,9 @@ import com.common.ServerResponse;
 import com.dao.GoodsMapper;
 import com.pojo.Goods;
 import com.service.IGoodsService;
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -46,5 +49,13 @@ public class GoodsServiceImpl implements IGoodsService {
         }
         return ServerResponse.createByErrorMessage("更新失败");
     }
+
+
+
+	@Override
+	public ServerResponse<List<Goods>> queryStorage() {
+		ServerResponse<List<Goods>> list = goodsMapper.queryStorage();
+		return list;
+	}
 
 }

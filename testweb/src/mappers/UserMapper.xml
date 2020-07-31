@@ -24,7 +24,7 @@
     from ops_user
     where id = #{id,jdbcType=INTEGER}
   </select>
-  <select id="Query" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+  <select id="Query" resultMap="BaseResultMap" parameterType="com.pojo.User" >
     select 
     <include refid="Base_Column_List" />
     from ops_user

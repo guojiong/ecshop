@@ -1,7 +1,11 @@
 package com.dao;
 
+import com.common.ServerResponse;
 import com.pojo.Goods;
 import com.pojo.User;
+
+import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface GoodsMapper {
@@ -10,6 +14,8 @@ public interface GoodsMapper {
     int insert(Goods record);
 
     int insertSelective(Goods record);
+    
+    ServerResponse<List<Goods>> queryStorage();
 
     User selectByPrimaryKey(Integer id);
 

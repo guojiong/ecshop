@@ -19,8 +19,8 @@ label {display:block; text-align:right;}
 <body>
  <div class="hrader" id="header">
   <a href="login.html" style="color:#FD7306;margin-left:20px;">请登录</a> 
-  <a href="reg.html">入库存查询</a>
-  <a href="reg.html">出库存查询</a>
+   <a href="storage.list">库存查询</a>
+  <a href="storage.add">入库登记</a>
    <div class="topNav">
    <a href="#" class="lan">中文</a>
    <a href="#" class="lan">English</a>

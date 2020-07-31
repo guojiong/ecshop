@@ -45,6 +45,12 @@
     from erp_goods
     where id = #{id,jdbcType=INTEGER}
   </select>
+  <select id="queryStorage" resultMap="BaseResultMap" parameterType="com.pojo.Goods" >
+    select 
+    <include refid="Base_Column_List" />
+    from erp_goods
+    where 1=1
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from erp_goods
     where id = #{id,jdbcType=INTEGER}

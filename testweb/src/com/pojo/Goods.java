@@ -36,6 +36,10 @@ public class Goods {
 	private String belongs_project; //所属项目
 	private String remark; //备注
 	
+    public Goods() {
+    	super();
+    }
+	
 	public Goods(int id, String storageTime, String code, String material_classes, String small_class_material, 
 			String materialName, String brand_specification_model, String manufacturer_name, String chengs, 
 			String unit, float rate, int number, float no_tax_price, float deduction_tax_fee, float no_tax_total_fee, 
@@ -78,10 +82,6 @@ public class Goods {
 		this.remark=remark; //备注
 	}
 	
-    public Goods() {
-        super();
-    }
-    
 	public Integer getId() {
 		return id;
 	}

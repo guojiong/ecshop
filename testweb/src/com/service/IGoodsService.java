@@ -1,5 +1,6 @@
 package com.service;
 
+import java.util.List;
 import com.common.ServerResponse;
 import com.pojo.Goods;
 
@@ -10,5 +11,6 @@ public interface IGoodsService {
 
     ServerResponse<String> add(Goods goods);
     ServerResponse<Goods> update(Goods goods);
+    ServerResponse<List<Goods>> queryStorage();
 
 }
