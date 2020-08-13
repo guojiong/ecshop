@@ -7,7 +7,7 @@ import os
 from ui.utils.config import REPORT_PATH, BASE_PATH
 import time
 import unittest
-from ui.test.case.order.test_login import TestLogin
+from datadriven.test.case.order.test_login import TestLogin
 from HTMLTestRunner_cn import HTMLTestRunner
 from emailreport.mailreport import EmailClass
 
@@ -35,7 +35,8 @@ with open(report, 'wb') as f:
         is_thread=True, 
         retry=1, 
         save_last_try=True)
-    runner.run(suitebypath(*path))
+    runner.run(suitebyadd())
+#     runner.run(suitebypath(*path))
     f.close()
 # 打开测试报告
 os.startfile(report)
