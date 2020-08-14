@@ -21,3 +21,4 @@ class Login(Page):
         if validate:
             self.find_element(*self.loc_validate_code).send_keys('111111')
             self.find_element(*self.loc_login_btn).click()
+        print('成功')

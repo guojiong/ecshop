@@ -1,0 +1,25 @@
+# 数据库
+test-qyt-8600:
+   host: 192.168.10.217
+   user: ymtx
+   password: 123456
+   port: 8600
+   charset: utf8
+test-qyt-8599:
+   host: 192.168.10.217
+   user: ymtx
+   password: 123456
+   port: 8599
+   charset: utf8
+test-agent-8600:
+   host: 192.168.10.218
+   user: ymtx
+   password: 123456
+   port: 8600
+   charset: utf8
+test-agent-8599:
+   host: 192.168.10.218
+   user: ymtx
+   password: 123456
+   port: 8599
+   charset: utf8   

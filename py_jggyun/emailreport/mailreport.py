@@ -17,7 +17,7 @@ class EmailClass():
         self.fromaddr = 'jiong.guo@qyt1902.com'
         self.frompasswd = 'Qyt0304.' # 部分邮件为授权码
         # 邮件接收方地址
-        self.toaddr = ['328905689@qq.com', '']  # []包裹，可群发
+        self.toaddr = ['328905689@qq.com', 'jiong.guo@qyt1902.com']  # []包裹，可群发
         self.message = MIMEMultipart('mixed')
     
     def send_content(self, title, report):
@@ -37,7 +37,7 @@ class EmailClass():
             server.login(self.fromaddr, self.frompasswd)
             server.sendmail(
                 from_addr=self.fromaddr, 
-                to_addrs=self.toaddr, 
+                to_addrs=','.join(self.toaddr), 
                 msg=self.message.as_string())
             print('Send Report Success')
             server.quit()
@@ -54,4 +54,4 @@ class EmailClass():
             return attach
             
 if __name__ == '__main__':
-    EmailClass().send(r"Order Test Report", r'D:\AutoFuncSysTest\mytest_rep\py_jggyun\ui\reports\report_09-08-12_09-54-59.html')
+    EmailClass().send(r"Order Test Report", r'D:\AutoFuncSysTest\mytest_rep\py_jggyun\datadriven/reports/report_17-08-14_17-25-54.html')

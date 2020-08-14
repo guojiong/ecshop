@@ -7,7 +7,7 @@ import os
 from ui.utils.config import REPORT_PATH, BASE_PATH
 import time
 import unittest
-from datadriven.test.case.order.test_login import TestLogin
+from ui.test.case.order.test_login import TestLogin
 from HTMLTestRunner_cn import HTMLTestRunner
 from emailreport.mailreport import EmailClass
 
