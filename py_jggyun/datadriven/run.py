@@ -10,12 +10,14 @@ import unittest
 from HTMLTestRunner_cn import HTMLTestRunner
 from emailreport.mailreport import EmailClass
 from datadriven.test.case.order.test_login import TestLogin
+from datadriven.test.case.order.test_month_order import TestMonthOrder
 
 report = os.path.join(REPORT_PATH, 'report_%s.html' % time.strftime('%H-%m-%d_%H-%M-%S'))
 
 def suitebyadd():
     suite = unittest.TestSuite()
-    suite.addTest(TestLogin("testLogin"))
+#     suite.addTest(TestLogin("testLogin"))
+    suite.addTest(TestMonthOrder("testQuery"))
     return suite
 
 def suitebypath(*args):

@@ -47,7 +47,9 @@ class PageFrame(Browser):
     
     def type(self, value, *by):
         try:
-            self.find_element(*by).send_keys(value)
+            element = self.find_element(*by)
+            element.click()
+            element.send_keys(value)
         except:
             print("输入 [" + value + "] 到 元素[" + by + "]失败")
             assert False
@@ -64,3 +66,11 @@ class PageFrame(Browser):
     
     def pause(self, seconds=1):
         sleep(seconds)
+        
+    #包装清除操作
+    def clear_value(self, *byElement):
+        try:
+            self.find_element(*byElement).set_attribute('value')= '';
+        except:
+            print("清空元素[" + byElement + "]失败")
+            assert False

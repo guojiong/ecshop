@@ -96,7 +96,9 @@ class SuperActions(object):
                     pass
                 
                 def clear_content():
-                    pass
+                    locator = row_value[locateColumnIndex].value  
+                    locator_way, locator_value = self.getPageElementLocator(locator, page_file_path)
+                    seleniumUtils.clear_value(*self.getLocateWay(locator_way, locator_value))
                 
                 def single_click():
                     # 1、获取用例步骤：测试数据与元素定位信息
