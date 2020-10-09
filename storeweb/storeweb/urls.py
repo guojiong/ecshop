@@ -21,6 +21,6 @@ from django.conf.urls import url
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', views.index),
-    path(r'get_directory/', views.get_directory),
+    url(r'^get_directory/', views.get_directory),
     url(r'^get_store_content/', views.get_store_content),
 ]

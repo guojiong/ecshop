@@ -1,5 +1,5 @@
 '''
-Created on 2020Äê10ÔÂ6ÈÕ
+Created on 2020ï¿½ï¿½10ï¿½ï¿½6ï¿½ï¿½
 
 @author: wqx
 '''
@@ -8,11 +8,11 @@ from django.contrib import admin
 from web import views
 from django.conf.urls import url
 
-app_name = 'web'  # ÕâÀïÊÇÎªÁËurl·´Ïò½âÎöÓÃ
+app_name = 'web'  # ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½urlï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 urlpatterns=[
     path('admin/', admin.site.urls),
     path('index/', views.index),
-    path(r'get_directory/', views.get_directory),
+    url(r'^get_directory/', views.get_directory),
     url(r'^get_store_content/', views.get_store_content),
     ]
