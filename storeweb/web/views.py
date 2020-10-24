@@ -19,7 +19,7 @@ def get_directory(request):
     for k, v in request.GET.items():
         logger.info(k)
         result[k] = v
-    directory = requests.get(result['url'])
+    directory = requests.get('http://' + result['url'])
     soup = BeautifulSoup(directory.content,"html.parser",from_encoding="utf-8")
     directory_soup = soup.find('div',id="list")
     return HttpResponse(str(directory_soup).replace('href="/', 'href="%s' % '/get_store_content/?path='))
